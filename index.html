@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuiabá Esporte Clube</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- Botão para tocar o hino -->
+<button id="play-button" class="play-button">🔊 Tocar Hino</button>
+
+    <header>
+        <h1>Cuiabá Esporte Clube</h1>
+    </header>
+    
+
+    <section class="hero">
+        <img src="imagens/logo.png" alt="Logo Cuiabá" class="logo" />
+        <h1>Bem-vindo ao Cuiabá Esporte Clube</h1>
+        <audio autoplay loop>
+            <source src="imagens/cuiaba/hino.mp3" type="audio/mpeg">
+            Seu navegador não suporta o áudio.
+        </audio>
+    </section>
+
+    <section id="noticias">
+        <h2>Últimas Notícias</h2>
+        <div class="news-carousel">
+            <div class="news-item active">
+                <h3>Cuiabá encerra o Brasileirão com permanência e vaga na Sul-Americana</h3>
+                <p>Na última partida da temporada, o Cuiabá garantiu sua permanência na Série A do Campeonato Brasileiro e conquistou uma vaga para a Copa Sul-Americana 2024.</p>
+                <img src="imagens/NOTICA1.jpg" alt="Cuiabá encerra o Brasileirão" class="news-image">
+            </div>
+            <div class="news-item">
+                <h3>Empate contra o Red Bull Bragantino</h3>
+                <p>Em um jogo recente, o Cuiabá enfrentou o Red Bull Bragantino e ficou no 0 a 0.</p>
+                <img src="imagens/NOTICIA.webp" alt="Empate contra o Red Bull Bragantino" class="news-image">
+            </div>
+            <div class="news-item">
+                <h3>Cuiabá anuncia reforço para 2025</h3>
+                <p>Grande nome chega a Cuiabá após curtir o fim de temporada em Dubai e se apresenta dia 01 de janeiro ao Cuiabá.</p>
+                <img src="imagens/NOTICIA2.jpg" alt="Cuiabá anuncia reforço para 2025" class="news-image">
+            </div>
+        </div>
+    </section>
+    
+    
+    </section>
+
+    <section id="titulos">
+        <h2>Títulos do Clube</h2>
+        <div class="titles-list">
+            <div class="title">
+                <h3>Campeonato Mato-Grossense</h3>
+                <p>11 títulos</p>
+            </div>
+            <div class="title">
+                <h3>Copa FMF</h3>
+                <p>2 título</p>
+            </div>
+            <div class="title">
+                <h3>Campeonato Brasileiro Série B</h3>
+                <p>1 título</p>
+            </div>
+            <div class="title">
+                <h3>Campeonato Brasileiro Série C</h3>
+                <p>1 título</p>
+            </div>
+        </div>
+    </section>
+    <section id="jogos">
+        <h2>Próximos Jogos</h2>
+        <div class="games-list">
+            <div class="game">
+                <p><strong>Data:</strong> 15/11 - Cuiabá vs Atlético Mineiro</p>
+            </div>
+            <div class="game">
+                <p><strong>Data:</strong> 20/11 - Cuiabá vs Flamengo</p>
+            </div>
+            <div class="game">
+                <p><strong>Data:</strong> 25/11 - Cuiabá vs Palmeiras</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="elenco">
+        <h2>Elenco Atual</h2>
+        <div class="team-list">
+            <div class="player">
+                <p><strong>Alan Empereur</strong> - Posição: Zagueiro</p>
+            </div>
+            <div class="player">
+                <p><strong>Claudio Winck</strong> - Posição: Lateral-direito</p>
+            </div>
+            <div class="player">
+                <p><strong>Everton Ribeiro</strong> - Posição: Meio-campo</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="historico">
+        <h2>História do Clube</h2>
+        <p>O Cuiabá Esporte Clube, fundado em 2001, tem como objetivo principal a promoção do esporte em Mato Grosso e a formação de jogadores...</p>
+    </section>
+
+    <section id="curiosidades">
+        <h2>Curiosidades</h2>
+        <p>O Cuiabá é conhecido pela sua forte base de jogadores e sua crescente popularidade no futebol brasileiro...</p>
+    </section>
+</main>
+
+    <footer>
+        <p>&copy; 2024 Cuiabá Futebol Clube. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Carrossel de notícias
+        let currentIndex = 0;
+        const newsItems = document.querySelectorAll('.news-item');
+        const totalItems = newsItems.length;
+
+        function showNextItem() {
+            newsItems[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % totalItems; // Volta ao primeiro item
+            newsItems[currentIndex].classList.add('active');
+        }
+
+        setInterval(showNextItem, 3000); // Troca a imagem a cada 3 segundos
+    </script>
+</body>
+</html>

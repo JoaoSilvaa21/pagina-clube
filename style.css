@@ -1,0 +1,135 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(226, 243, 224, 0.8), rgba(118, 207, 108, 0.8)), url('imagens/fundo.jfif'); /* Gradiente e imagem de fundo */
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333; /* Cor do texto escura */
+}
+
+/* Adicionando uma sobreposição se necessário */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Sobreposição escura */
+    z-index: 1; /* Coloca a sobreposição atrás do texto */
+}
+
+
+header {
+    background-color: #008707; /* Cor de fundo do cabeçalho */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.hero {
+    background-color: #00871d; /* Cor de fundo do herói */
+    color: white;
+    text-align: center;
+    padding: 50px;
+    position: relative;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero img {
+    width: 150px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.play-button {
+    position: fixed; /* Fixa o botão na tela */
+    right: 20px; /* Distância da borda direita */
+    top: 20px; /* Distância do topo */
+    background-color: #3c763d; /* Cor de fundo verde */
+    color: white; /* Cor do texto */
+    border: none; /* Remove borda padrão */
+    border-radius: 5px; /* Arredonda os cantos */
+    padding: 10px 15px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s; /* Efeito de transição para hover */
+}
+
+.play-button:hover {
+    background-color: #5cb85c; /* Cor de fundo ao passar o mouse */
+}
+
+
+.news-carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    height: auto; /* Ajuste para permitir altura automática */
+}
+
+.news-item {
+    flex: 1; /* Faz com que os itens tenham largura igual */
+    padding: 20px;
+    text-align: center; /* Centraliza o texto */
+}
+
+.news-image {
+    max-width: 100%; /* Faz a imagem ocupar no máximo a largura do seu contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Adiciona bordas arredondadas às imagens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+}
+
+
+.news-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.active {
+    display: block; /* Exibe apenas o item ativo */
+}
+
+#titulos {
+    padding: 20px;
+}
+
+.titles-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.title {
+    border: 2px solid #010502; /* Borda dos títulos */
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #008707; /* Cor de fundo do rodapé */
+    color: white;
+}
+
+h2, h3, p {
+    font-weight: bold; /* Texto em negrito */
+}
+.logo {
+    width: 150px; /* Tamanho da logo */
+    height: auto; /* Mantém a proporção */
+    display: block; /* Garante que a imagem seja tratada como um bloco */
+    margin: -80px auto 0; /* Ajusta a posição da logo para cima */
+    position: relative; /* Mantém a posição relativa */
+}
